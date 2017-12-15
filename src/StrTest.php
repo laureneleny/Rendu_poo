@@ -50,6 +50,7 @@ class StrTest extends TestCase
     public function testExo5()
     {
 
+        lezkjczejiezfjfezijfezifjijzfeifejzfizejfijeifjeezijffijziehzizehfizefhi
         $this->assertSame('MyString', Str::on('my_string')->studlyCase()->toString()); // true
         $this->assertSame('MyString', Str::on('myString')->studlyCase()->toString()); // true
         $this->assertSame('MyString', Str::on('my-string')->studlyCase()->toString()); // true
