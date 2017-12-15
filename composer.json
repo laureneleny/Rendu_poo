@@ -1,0 +1,20 @@
+{
+    "name": "leny/test-poo",
+    "description": "Rendu final",
+    "authors": [
+        {
+            "name": "Laurène Le Ny",
+            "email": "laureneleny@hotmail.fr"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Strings\\": "src/"
+        }
+    }
+}
