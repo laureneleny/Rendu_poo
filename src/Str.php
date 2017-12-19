@@ -95,12 +95,45 @@ class Str
             ->replace('--', '-');
     }
 
+    // exo 4.5
+
+    public function kebabCase()
+    {
+        return $this
+            ->replace(' ', '-')
+            ->replace('_', '-')
+            ->pregReplace('/(.)(?=[A-Z])/', '$1-')
+            ->minuscule()
+            ->replace('--', '-');
+    }
+
+
     // exo 5
     public function studlyCase()
     {
         return $this
-            ->replace()
+            ->replace('_', ' ')
+            ->replace('-', ' ')
+            ->ucwords()
+            ->pregReplace('/(.)(?=[A-Z])/', '$1 ')
+            ->replace(' ', '');
+
+
+
+
     }
+
+    // exo 5.5
+    public function titleCase()
+    {
+        return $this
+            ->replace('_', ' ')
+            ->replace('-', ' ')
+            ->ucwords()
+            ->pregReplace('/(.)(?=[A-Z])/', '$1 ')
+            ->replace(' ', '');
+    }
+
 
 
 

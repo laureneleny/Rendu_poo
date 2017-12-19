@@ -47,16 +47,38 @@ class StrTest extends TestCase
         $this->assertSame('my-string', Str::on('My String')->slugCase()->toString()); // true
     }
 
+    public function testExo4_5()
+    {
+        $this->assertSame('my-string', Str::on('my_string')->kebabCase()->toString()); // true
+        $this->assertSame('my-string', Str::on('myString')->kebabCase()->toString()); // true
+        $this->assertSame('my-string', Str::on('my-string')->kebabCase()->toString()); // true
+        $this->assertSame('my-string', Str::on('my string')->kebabCase()->toString()); // true
+        $this->assertSame('my-string', Str::on('My String')->kebabCase()->toString()); // true
+    }
+
     public function testExo5()
     {
 
-        lezkjczejiezfjfezijfezifjijzfeifejzfizejfijeifjeezijffijziehzizehfizefhi
+
         $this->assertSame('MyString', Str::on('my_string')->studlyCase()->toString()); // true
         $this->assertSame('MyString', Str::on('myString')->studlyCase()->toString()); // true
         $this->assertSame('MyString', Str::on('my-string')->studlyCase()->toString()); // true
         $this->assertSame('MyString', Str::on('my string')->studlyCase()->toString()); // true
         $this->assertSame('MyString', Str::on('My String')->studlyCase()->toString()); // true
     }
+
+    public function testExo5_5()
+    {
+
+
+        $this->assertSame('MyString', Str::on('my_string')->titleCase()->toString()); // true
+        $this->assertSame('MyString', Str::on('myString')->titleCase()->toString()); // true
+        $this->assertSame('MyString', Str::on('my-string')->titleCase()->toString()); // true
+        $this->assertSame('MyString', Str::on('my string')->titleCase()->toString()); // true
+        $this->assertSame('MyString', Str::on('My String')->titleCase()->toString()); // true
+    }
+
+z
 
 
 }
